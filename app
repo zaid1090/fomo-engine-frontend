@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 
 // الاتصال بالخادم اللحظي
-const socket = io(process.env.NEXT_PUBLIC_BACKEND_URL || 'https://fomo-engine-backend-800871339199.asia-east1.run.app', {
-  transports: ['websocket'] // إجبار الاتصال المباشر لتخطي قيود جوجل
-});
+const socket = io(process.env.NEXT_PUBLIC_BACKEND_URL || 'https://fomo-engine-backend-800871339199.asia-east1.run.app');
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
