@@ -23,7 +23,7 @@ export default function Home() {
     setLoading(true);
     setResponseMsg(null);
     // سيتم ربط هذا الرابط بمحرك Google Cloud لاحقاً
-    const baseUrl = "https://fomo-engine-backend-800871339199.asia-east1.run.app";
+    const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
     const endpoint = `${baseUrl}/api/checkout`;
 
     try {
